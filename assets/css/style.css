@@ -3,16 +3,103 @@
     margin: 0;
     box-sizing: border-box;
 }
+:root{
+    --primary: #8A1E41;
+    --gray:#e1d7da;
+}
+body{
+    background-color: var(--gray) !important;
+}
 header{
     height:200vh ;
     width: 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-image: url(../images/WhatsApp\ Image\ 2025-06-18\ at\ 2.21.13\ PM.jpeg);
+    /* background-repeat: no-repeat; */
+    /* object-fit: cover; */
+    /* background-size: cover; */
+    /* background-image: url(../images/WhatsApp\ Image\ 2025-06-18\ at\ 2.21.13\ PM.jpeg); */
+}
+.headerImg{
+    height: 200vh;
+    width: 100%;
+    object-fit: cover;
 }
 /* ...............navhar..................... */
 .lineNav{
     height: 35px;
     width: 2.5px;
     background-color: rgb(183, 53, 53);
+}
+/* ............section Crafts................. */
+.title{
+    margin-top: 50px;
+    padding-top: 50px;
+    text-align: center;
+        color: var(--primary);
+}
+.title1{
+    margin-top: 20px;
+    text-align: center;
+        color:var(--primary);
+}
+.images{
+    height: 250px;
+    /* border-radius: 567890px; */
+    width: 200px;
+}
+.grids{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
+.clothing{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.bggray{
+    background-color:var(--gray);
+}
+.craft{
+     box-shadow: 1px 1px 12px var(--primary);
+} 
+/* ...... */
+/* .imgStore{
+    height: 200px;
+}
+.Crafts .bggray{
+    overflow-x: scroll;
+}
+.widths{
+    width: auto;
+    height: 500px;
+ }  */
+   /* خلفية رمادية للقسم */
+.bggray {
+  background-color: var(--gray); /* رمادي فاتح */
+}
+
+/* حجم الكرت داخل الـ scroll */
+.widths {
+  /* min-width: 1px; */
+  flex: 0 0 auto;
+  box-shadow: 1px 1px 14px var(--primary);
+  border-radius: 30px !important;
+}
+
+/* ضبط صور المنتجات */
+.imgStore {
+  height:320px;
+  object-fit: cover;
+  padding-top: 20px;
+  border-radius: 20px !important;
+  box-shadow: 1px 1px 5px var(--gray);
+  
+}
+
+/* اختيارية: إذا حبيت تنسّق عنوان القسم */
+.title {
+  text-align: center;
+  margin-top: 20px;
+  /* font-weight: bold; */
 }
