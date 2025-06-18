@@ -25,9 +25,10 @@ header{
 }
 /* ...............navhar..................... */
 .lineNav{
-    height: 35px;
+    height: 30px;
     width: 2.5px;
     background-color: rgb(183, 53, 53);
+    /* text-align: center; */
 }
 /* ............section Crafts................. */
 .title{
