@@ -27,10 +27,13 @@ header{
 .lineNav{
     height: 30px;
     width: 2.5px;
-    background-color:var(--primary);
-    
+    background-color:var(--primary);   
 }
-
+ /* nav .footerLogo{
+    width: 10px !important; 
+    height: 10px !important;  
+    color: var(--primary) !important; 
+    } */
 /* ............section Crafts................. */
 .title{
     margin-top: 50px;
@@ -159,6 +162,10 @@ input[type="email"]{
     -o-border-radius: 20px;
     padding: 8px 55px 8px 5px;
 border: none;
+}
+.footerLogo{
+    width: 60px;
+    height: 60px;
 }
 
 
