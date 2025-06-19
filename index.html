@@ -3,23 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sunbula-Store</title>
+    <title>Sunbula Store</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/media.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- <link rel="icon" type="image/png" href="logo.png"> -->
 </head>
 
 <body>
   <!-- ....header....... -->
   <header>
-    
-<img class="headerImg" src="assets/images/header img.jpeg" alt="header image">
-
+   <h1>SHOP LOCAL • SUPPORT HANDMADE</h1>
 </header>
 <!-- ..............navbar...................... -->
   <nav class="navbar navbar-expand-lg bg-white fixed-top">
   <div class="container-fluid m-1">
+    <a href="index.html"> <img  src="assets/images/logo.png" class="Logo" alt=""></a>
    <i class="bi bi-bag-fill icon"></i> 
     <button class="navbar-toggler  me-2 bttn" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -27,29 +27,29 @@
     <div class="collapse navbar-collapse  " id="navbarSupportedContent">
       <ul class="navbar-nav mb-2 mb-lg-0 mx-auto">
         <li class="nav-item mx-2">
-          <a class="nav-link text-danger" href="#About">About</a>
+          <a class="nav-link " href="#About">About</a>
         </li>
           <div class="lineNav ms-3 me-3"></div>
     
          <li class="nav-item mx-2">
-          <a class="nav-link text-danger" href="#Clothing">Clothing</a>
+          <a class="nav-link text-danger" href="Clothing.html">Clothing</a>
         </li>
         <li class="nav-item mx-2">
-          <a class="nav-link text-danger" href="#Bags&Accessoies">Bags&Accessoies</a>
+          <a class="nav-link text-danger" href="Bags&Accessoies.html">Bags&Accessoies</a>
         </li>
        <li class="nav-item mx-2">
-          <a class="nav-link text-danger " href="#Home&Kitchin">Home&Kitchin</a>
+          <a class="nav-link text-danger " href="#Home&Kitchin.html">Home&Kitchin</a>
         </li>
         
         </li>
         <li class="nav-item mx-2">
-          <a class="nav-link text-danger " href="#Jewelry">Jewelry</a>
+          <a class="nav-link " href="#Jewelry">Jewelry</a>
         </li>
          <li class="nav-item mx-2">
-          <a class="nav-link text-danger " href="#Kids&Babies">Kids&Babies</a>
+          <a class="nav-link " href="#Kids&Babies">Kids&Babies</a>
         </li>
            <li class="nav-item mx-2">
-          <a class="nav-link text-danger " href="#Gifts">Gifts</a>
+          <a class="nav-link " href="#Gifts">Gifts</a>
         </li>
 
       </ul>
@@ -59,7 +59,7 @@
   </nav>
   <main>
     <!-- .......Crafts section............... -->
-    <section class="Crafts bggray">
+    <section class="Crafts bggray" id="Crafts">
   <div class="container">
     <h3 class="title fs-3">The Best of Palestinian Crafts</h3>
     <h4 class="title1 fs-5">Explore fair trade gifts & crafts, handmade in Palestine</h4>
@@ -68,7 +68,7 @@
       
       <!-- Grid 1 -->
       <a href="clothing.html" class="w-70 craft text-decoration-none text-center">
-        <div class="clothing">
+        <div>
           <img src="assets/images/clothing.jpeg" alt="Palestine Shawl" class="images">
           <p class="mt-2 text-dark fw-semibold">Palestine Shawl</p>
         </div>
@@ -76,7 +76,7 @@
 
       <!-- Grid 2 -->
       <a href="gifts.html" class="w-70 craft text-decoration-none text-center">
-        <div class="clothing">
+        <div>
           <img src="assets/images/gifts.jpeg" alt="Gifts" class="images">
           <p class="mt-2 text-dark fw-semibold">Gifts</p>
         </div>
@@ -92,7 +92,7 @@
 
       <!-- Grid 4 -->
       <a href="home-kitchen.html" class="w-70 craft text-decoration-none text-center">
-        <div class="clothing">
+        <div >
           <img src="assets/images/home&kitchin.jpeg" alt="Home & Kitchen" class="images">
           <p class="mt-2 text-dark fw-semibold">Home & Kitchen</p>
         </div>
@@ -103,7 +103,7 @@
 </section>
 
      <!-- ...............customersFavorites section................ -->
-     <section class="customersFavorites bggray">
+     <section class="customersFavorites bggray" id="customersFavorites">
   <div class="container">
     <h3 class="title fs-3">Customers' Favorites</h3>
     <div class="d-flex flex-row flex-nowrap  overflow-auto gap-4 py-3 px-2 customersFavorites">
@@ -111,7 +111,7 @@
       <div class="card widths">
         <img src="assets/images/bag.jpeg" class="card-img-top imgStore" alt="bag image">
         <div class="card-body">
-          <h5 class="card-title">Floral Handbag </h5>
+          <h5 class="card-title fs-5">Floral Handbag </h5>
           <p class="card-text">$ 49</p>
           <a href="#" class="btn btn-primary">Go somewhere</a>
         </div>
@@ -120,7 +120,7 @@
       <div class="card widths">
         <img src="assets/images/book.jpeg" class="card-img-top imgStore" alt="book image">
         <div class="card-body">
-          <h5 class="card-title">Seventeen Embroidery <br>Techniques from Palestine</h5>
+          <h5 class="card-title fs-5">Seventeen Embroidery <br>Techniques from Palestine</h5>
           <p class="card-text">$ 48</p>
           <a href="#" class="btn btn-primary">Go somewhere</a>
         </div>
@@ -129,7 +129,7 @@
       <div class="card widths">
         <img src="assets/images/Keffiyehs.jpeg" class="card-img-top imgStore" alt="keffiyeh image">
         <div class="card-body">
-          <h5 class="card-title">Palestine Black and <br> White Keffiyeh Scarf</h5>
+          <h5 class="card-title fs-5">Palestine Black and <br> White Keffiyeh Scarf</h5>
           <p class="card-text">$ 55</p>
           <a href="#" class="btn btn-primary">Go somewhere</a>
         </div>
@@ -147,7 +147,7 @@
       <div class="card widths">
         <img src="assets/images/kids&bebies.jpeg" class="card-img-top imgStore" alt="kids&babies image">
         <div class="card-body">
-          <h5 class="card-title">Baby Onesie - Beautiful</h5>
+          <h5 class="card-title fs-5">Baby Onesie - Beautiful</h5>
           <p class="card-text">$ 12</p>
           <a href="#" class="btn btn-primary">Go somewhere</a>
         </div>
@@ -155,8 +155,8 @@
 
       <div class="card widths">
         <img src="assets/images/home.jpeg" class="card-img-top imgStore" alt="Cushion Cover image">
-        <div class="card-body">
-          <h5 class="card-title">Embroidered Cushion Cover - Qabba</h5>
+        <div class="card-body ">
+          <h5 class="card-title fs-5">Embroidered Cushion Cover - Qabba</h5>
           <p class="card-text">$ 40</p>
           <a href="#" class="btn btn-primary">Go somewhere</a>
         </div>
@@ -165,7 +165,7 @@
       <div class="card widths">
         <img src="assets/images/Table Runner.jpeg" class="card-img-top imgStore" alt="Table Runner image">
         <div class="card-body">
-          <h5 class="card-title">Table Runner - Colored Nakhleh</h5>
+          <h5 class="card-title fs-5">Table Runner - Colored Nakhleh</h5>
           <p class="card-text">$ 50</p>
           <a href="#" class="btn btn-primary">Go somewhere</a>
         </div>
@@ -174,7 +174,7 @@
       <div class="card widths">
         <img src="assets/images/bag2.jpeg" class="card-img-top imgStore" alt="Tote Bag image">
         <div class="card-body">
-          <h5 class="card-title">Tote Bag: Arabic Calligraphy Artwork</h5>
+          <h5 class="card-title fs-5">Tote Bag: Arabic Calligraphy Artwork</h5>
           <p class="card-text">$ 60</p>
           <a href="#" class="btn btn-primary">Go somewhere</a>
         </div>
@@ -183,12 +183,81 @@
     </div>
   </div>
 </section>
+<!-- .......... -->
+<section class="Reviews" id="Reviews">
+      <div class="container">
+          <h2>Reviews</h2>
+         <div class="flex">
+
+        <div class="card">
+     <div class="flex">
+           <img src="assets/images/review.png" alt="">
+           <i class="fa-solid fa-quote-right"></i>
+           </div>
+        <h4>Maya Al-Hassan</h4>
+        <p>Absolutely loved the embroidered women's clothing — so elegant and unique! I also got a keffiyeh and some handmade jewelry as gifts. Everything felt authentic and full of meaning. Beautiful work and excellent service!</p>
+        <div>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star-half-stroke"></i>
+    </div>  
+     </div>
+      <div class="card">
+     <div class="flex">
+           <img src="assets/images/review_1.png" alt="">
+           <i class="fa-solid fa-quote-right"></i>
+           </div>
+        <h4>John Deo</h4>
+        <p>I was deeply impressed by the authenticity and cultural richness of these handmade pieces. I bought one as a gift, and it felt so meaningful — a beautiful way to support Palestinian artisans and keep their heritage alive</p>
+        <div>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star-half-stroke"></i>
+    </div>  
+     </div>
+      <div class="card">
+     <div class="flex">
+           <img src="assets/images/review_2.png" alt="">
+           <i class="fa-solid fa-quote-right"></i>
+           </div>
+        <h4>Nour Fakhoury</h4>
+        <p> "I bought a traditional Palestinian keffiyeh along with some unique gifts. The quality and craftsmanship exceeded my expectations. Proud to support such authentic cultural products!</p>
+        <div>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star-half-stroke"></i>
+    </div>  
+     </div>
+        <div class="card">
+     <div class="flex">
+           <img src="assets/images/review_3.png" alt="">
+           <i class="fa-solid fa-quote-right"></i>
+           </div>
+        <h4>Sara Kamal</h4>
+        <p>I ordered a handmade bag and some baby clothes with embroidery — the craftsmanship is outstanding! Everything was beautifully made and arrived just as expected. Highly recommended!</p>
+        <div>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star-half-stroke"></i>
+    </div>  
+     </div>
+     </div>
+      </div>
+    </section>
 
   </main>
  <footer class="Footer">
   <div class="container">
     <div class="flex">
-      <div>
+      <div >
         <h3>ABOUT</h3>
         <ul>
             <li><a href="#Our Story">Our Story</a></li>
@@ -208,11 +277,11 @@
             <li><a href="#Gifts">Gifts</a></li>
          </ul>
       </div>
-      <div>
+      <div >
       <h3>Follow Us</h3>
       <p> <a href=""><i class="fa-brands fa-facebook-f"></i></a>  <a href=""> <i class="fa-brands fa-instagram"></i></a> <a href=""><i class="fa-brands fa-twitter"></i></a></p>
       </div>
-      <div>
+      <div >
         <h3>CONNECT WITH US</h3>
         <ul>
           <li><i class="fa-solid fa-envelope"></i> info@sunbula.org</li>

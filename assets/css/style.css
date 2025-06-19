@@ -7,6 +7,7 @@
     --primary: #8A1E41;
     --gray:#e1d7da;
     --blue:#194C69;
+    --grey:#545050;
 }
 body{
     background-color: var(--gray) !important;
@@ -14,9 +15,14 @@ body{
 header{
     height:195vh ;
     width: 100%;
-     /* background-repeat: no-repeat;  */
+object-fit: cover;
      background-size: cover;
-    /* background-image: url(assets/images/headerimg.jpeg); */
+    background-image: url(../images/headerimg.jpeg);
+}
+header h1{
+        margin:0px 0px 100px;
+
+        color:white ;
 } 
 .headerImg{
     height: 200vh;
@@ -29,11 +35,10 @@ header{
     width: 2.5px;
     background-color:var(--primary);   
 }
- /* nav .footerLogo{
-    width: 10px !important; 
-    height: 10px !important;  
-    color: var(--primary) !important; 
-    } */
+ .Logo{
+    width: 150px !important; 
+    height: 80px !important; 
+    } 
 /* ............section Crafts................. */
 .title{
     margin-top: 50px;
@@ -46,45 +51,30 @@ header{
     text-align: center;
         color:var(--primary);
 }
-/* ....... */
+
 .images{
     height: 250px;
-    /* border-radius: 567890px; */
     width: 200px;
 }
-.grids{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
 
-}
-.clothing{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
-}
-.bggray{
-    background-color:var(--gray);
-}
+
 .craft{
      box-shadow: 1px 1px 12px var(--primary);
-} 
-/* ...... */
-/* .imgStore{
-    height: 200px;
-}
-.Crafts .bggray{
-    overflow-x: scroll;
-}
-.widths{
-    width: auto;
-    height: 500px;
- }  */
-
-.bggray {
-  background-color: var(--gray); 
 }
 
+
+
+
+.craft:hover {
+  transform: translateY(-8px); 
+}
+
+.craft:hover img.images {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px var(--grey); 
+}
+
+/* ...............customersFavorites section.................... */
 
 .widths {
   flex: 0 0 auto;
@@ -101,14 +91,8 @@ header{
   
 }
 
-.title {
-  text-align: center;
-  margin-top: 20px;
-  /* font-weight: bold; */
-}
 
-
-/* ...........footer.......... */
+/* ......................................footer.............................. */
 .Footer .flex{
     gap: 20px;
      align-items: flex-start;
@@ -167,5 +151,118 @@ border: none;
     width: 60px;
     height: 60px;
 }
+/* ............... */
+  .Reviews .card{
+ text-align: start;
+ padding:20px;
+ margin-bottom: 50px;
+ background: #fff;
+  border-radius: 12px;
+  width: 250px;
+  box-shadow: 1px 1px 15px var(--primary);
+  transition: all 0.3s ease-in-out; 
+   position: relative;
+   }
+   .Reviews img{
+    width: 60px;
+    height: 60px;
+    border-radius: 11111111px;
+    -webkit-border-radius: 11111111px;
+    -moz-border-radius: 11111111px;
+    -ms-border-radius: 11111111px;
+    -o-border-radius: 11111111px;
+}
+
+.Reviews  .card .flex{
+    justify-content:space-between;
+    padding:5px 0px ;
+    
+}
+.Reviews  .card p{
+    font-size: 12px;
+  color:var(--grey);
+}
+
+.Reviews h2{
+    text-align: center;
+    font-size:50px ;
+   margin:50px 0px 80px 0px;
+  color:var(--primary);
+  
+}
+ .card h4 {
+  margin: 10px;
+  font-size: 20px;
+  color:var(--grey);
+} 
+
+.Reviews  .card .flex i{
+    color: var(--gray);
+    font-size: 60px;
+}
+
+ .Reviews .container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+  .Reviews .flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+} 
+
+
+ .card:hover {
+  box-shadow: 0 0 20px rgba(255, 165, 0, 0.6); 
+   transform: translateY(-10px);
+} 
+
+/* تنسيق الصور والأيقونات داخل الكارد */
+ /* .card .flex {
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}   */
+
+.card i {
+  color:var(--primary);
+  margin-right: 2px;
+}   
+/* .................clothing page.................. */
+
+.clothingHeader{
+background-image: url(../images/clothingpageimg.jpg);
+background-size: contain;
+object-fit: cover;
+background-repeat: no-repeat;
+margin-top: 65px;
+height: 60vh;
+width: 100%;
+
+
+   }
+   /* .clothingPage .card{
+    width: 200px;
+    height: 300px;
+   } */
+  
+   .clothingPage .clothes{
+    height: 420px;
+    margin-bottom: 20px;
+    background-color: var(--gray) !important;
+   }
+   .clothingPage img{
+    height: 250px;
+   }
+
+
+
+   
+   
+
+
 
 
