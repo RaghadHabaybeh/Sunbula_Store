@@ -9,10 +9,11 @@
     --blue:#194C69;
     --grey:#545050;
 }
+
 body{
     background-color: var(--gray) !important;
 }
-header{
+.homeHeader{
     height:195vh ;
     width: 100%;
 object-fit: cover;
@@ -230,7 +231,69 @@ border: none;
 .card i {
   color:var(--primary);
   margin-right: 2px;
-}   
+}  
+
+/* .raghadStor .container{
+    display: flex;
+    justify-items: center;
+    width: 50%;
+    height: 60vh;
+    gap:10px;
+    margin: auto;
+}
+.raghadStor .container img{
+    width: 15%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    border:2px solid white
+    transition: width 0.3s ease-in-out;
+}
+.raghadStor .container img:hover{
+    width: 50%;
+} */
+
+/* .raghadStor .gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.raghadStor .gallery img {
+  flex: 1 1 calc(25% - 10px);
+  min-width: 150px;
+  max-width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 15px;
+  border: 2px solid white;
+  transition: flex 0.3s ease, transform 0.3s ease;
+}
+
+.raghadStor .gallery img:hover {
+  flex: 1 1 calc(50% - 10px);
+  transform: scale(1.05);
+}
+
+/* تجاوب للشاشات الصغيرة */
+/* @media (max-width: 768px) {
+  .raghadStor .gallery img {
+    flex: 1 1 calc(33.33% - 10px);
+    max-width: none;
+    height: 150px;
+  }
+} */
+
+/* @media (max-width: 480px) {
+  .raghadStor .gallery img {
+    flex: 1 1 calc(50% - 10px);
+    height: 120px;
+  }
+*/
+
+
+
 /* .................clothing page.................. */
 
 .clothingHeader{
@@ -240,25 +303,117 @@ object-fit: cover;
 background-repeat: no-repeat;
 margin-top: 65px;
 height: 60vh;
-width: 100%;
-
-
+width: 100%
    }
-   /* .clothingPage .card{
-    width: 200px;
-    height: 300px;
-   } */
+.clothingHeader h1{
+color: white;
+    text-align: start; 
+    text-shadow: 5px -2px 4px #000;
+    margin: 0;
+    padding: 70px 80px;
+   transition: all 0.3s ease-in-out;  
+}
   
-   .clothingPage .clothes{
+    .clothingPage .clothes{
     height: 420px;
     margin-bottom: 20px;
     background-color: var(--gray) !important;
-   }
+   } 
    .clothingPage img{
     height: 250px;
-   }
+   } 
+.btn{
+    background-color: var(--primary) !important;
+    color: whitesmoke !important;
+    margin-top: 10px 0px !important;
+ 
+}
+/* ................kidspage.......... */
+.kidsHeader {
+    h1{
+        color: var(--blue);
+        margin-top: 130px;
+          transition: all 0.3s ease-in-out; 
+           text-shadow: 8px -3px 5px var(--blue); 
+      
+    }
+    p{
+        font-size: 17px;
+        color: var(--grey);
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, Cochin, Georgia, Times, 'Times New Roman', serif ;
+    }
+}
+     .product-card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #fafafa;
+  text-align: center;
+  margin-bottom: 20px;
+  box-shadow: 2px -2px 15px 3px var(--grey);
+  transition:all 0.3s ease ;
+}
+.product-card:hover{
+    transform: translate(-8px);
+    scale: (1.03);
+    box-shadow: 1px 1px 10px 6px var(--primary);
+}
+.kids_Babies .product-card{
+    height: 440px;
+}
 
-
+.product-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 10px
+ 
+} 
+/* .product-card p{
+      font-size: 14px;
+} */
+/* .........................jewelrypage............... */
+.jewelryHeader{
+    background-image: url(../images/jewelrypageimg1.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+  width: 100%;
+  height:200px ;
+  margin-top: 100px;
+ 
+}
+  .jewelryHeader h1{
+    color: white;
+    text-align: start; 
+    text-shadow: 5px -2px 4px #000;
+    margin: 0;
+    padding: 60px 80px;
+   transition: all 0.3s ease-in-out;   
+  }
+  h1:hover{
+    transform: translateY(-10px);
+  }
+ 
+  .jewelrySection .product-card{
+    height: 300px;
+  }
+  /* .............aboutpage.......... */
+  .ourstoryHeader{
+    background-image: url(../images/ourstory.jpg);
+  }
+  /* ...........homeSection........... */
+  .homeSection .product-card{
+    height: 500px;
+  }
+/* ..........decorSection.......... */
+.decorSection .product-card{
+    height: 440px;
+}
+/* ........kitchinSection......... */
+.decorSection .product-card p{
+    font-size: 12px;
+}
 
    
    
