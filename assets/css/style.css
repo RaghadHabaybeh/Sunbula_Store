@@ -1,3 +1,5 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 *{
     padding: 0;
     margin: 0;
@@ -16,20 +18,22 @@ body{
 .homeHeader{
     height:195vh ;
     width: 100%;
-object-fit: cover;
-     background-size: cover;
+    object-fit: cover;
+   background-size: cover;
     background-image: url(../images/headerimg.jpeg);
 }
-header h1{
-        margin:0px 0px 100px;
+.homeHeader h1{
+color:white;
+margin-top: 100px;
+text-align: center; 
 
-        color:white ;
-} 
-.headerImg{
+
+}
+/* .headerImg{
     height: 200vh;
     width: 100%;
     object-fit: cover;
-}
+} */
 /* ...............navhar..................... */
 .lineNav{
     height: 30px;
@@ -40,12 +44,21 @@ header h1{
     width: 150px !important; 
     height: 80px !important; 
     } 
+    nav a{
+      text-decoration: none;
+      font-weight: normal;
+      transition: all 0.3s ease;
+    }
+    nav a:hover{
+      color:#8A1E41;
+      font-weight: bold;
+    }
 /* ............section Crafts................. */
 .title{
     margin-top: 50px;
     padding-top: 50px;
     text-align: center;
-        color: var(--primary);
+   color: var(--primary);
 }
 .title1{
     margin-top: 20px;
@@ -221,12 +234,7 @@ border: none;
    transform: translateY(-10px);
 } 
 
-/* تنسيق الصور والأيقونات داخل الكارد */
- /* .card .flex {
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 15px;
-}   */
+
 
 .card i {
   color:var(--primary);
@@ -414,7 +422,16 @@ color: white;
 .decorSection .product-card p{
     font-size: 12px;
 }
-
+.product-card a{
+  text-decoration: none;
+  color: var(--grey);
+  font-weight: normal ;
+  transition: all 0.3s ease;
+}
+.product-card a:hover{
+  color: var(--primary);
+  font-weight:bold;
+}
    
    
 
