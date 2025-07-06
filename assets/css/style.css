@@ -61,11 +61,11 @@ background-color: rgba(240, 231, 231, 0.5);
     nav a i{
     color: var(--primary);
     font-size: 30px;
-    margin-right: 0px;
+ 
     }
-    .navbar-toggler {
-      margin-left: 300px !important;
-    }
+    /* .navbar-toggler {
+      margin-left: 30px !important;
+    } */
 /* ..................section Crafts................................... */
 .title{
     margin-top: 50px;

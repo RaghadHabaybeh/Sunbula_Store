@@ -68,6 +68,7 @@ document.querySelectorAll(".product-card .btn").forEach((btn) => {
             </div>
             <button class="btn btn-danger btn-sm ms-3 remove-btn" data-index="${index}">Remove</button>
           `;
+          
 
           cartContainer.appendChild(productCard);
         });
@@ -102,7 +103,40 @@ document.querySelectorAll(".product-card .btn").forEach((btn) => {
       }
 
       updateCartUI();
-    });
+      // updatingcount ()
+
+
+
+      
+      if (cart.length > 0) {
+  const Checkoutbtn = document.createElement('div');
+  const button = document.createElement('button');
+  button.className = "btn btn-danger  fs-4 hover-effect mt-4";
+  button.innerText = "Checkout";
+  Checkoutbtn.className = "text-center";
+  Checkoutbtn.appendChild(button);
+  cartContainer.appendChild(Checkoutbtn);
+  button.onclick = function () {
+    location.href = "cheakout.html";
+  }
+}
+document.body.style.backgroundColor="#e1d7da";
+
+  // const cartcount=document.getElementById('cart-count')
+
+
+// function updatingcount (){
+// let totalcount=0
+// for(let i=0;i<cart.length;i++){
+//   totalcount+=cart[i].quantity
+//   cartcount.innerText=totalcount
+// }
+
+// }
+
+
+
+});
 
 
 
