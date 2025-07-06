@@ -1,10 +1,46 @@
+
 @media screen and (max-width:1000px){
+
+.clothingHeader{
+    height: 30vh;
+}
+header.clothingHeader{
+/* margin: 20px; */
+
+}
+
    .line{
         display: none;
    }
-    .clothingHeader{
-        width: 100%;
-        height: 50vh;
-    }
+
+    /* header .clothingHeader{
+margin-bottom: 0px;
+    } */
+}
+.heroText{
+    position: absolute;
+    top:250px ;
+    left: 280px;
 }
 
+
+
+@media screen and (max-width:750px){
+.Footer .flex {
+    flex-direction: column;
+    gap: 25px;
+}
+.Footer div{
+    width: 100%;
+    text-align: center;
+}
+ .heroText{
+    position: absolute;
+    top:150px ;
+    left: 100px;
+    padding: 5px 10px;
+    h1{
+        font-size: 20px;
+    }
+} 
+}

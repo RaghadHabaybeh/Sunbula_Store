@@ -1,5 +1,6 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap');
+
 *{
     padding: 0;
     margin: 0;
@@ -14,31 +15,35 @@
 
 body{
     background-color: var(--gray) !important;
-}
-.homeHeader{
-    height:195vh ;
-    width: 100%;
-    object-fit: cover;
-   background-size: cover;
-    background-image: url(../images/headerimg.jpeg);
-}
-.homeHeader h1{
-color:white;
-margin-top: 100px;
-text-align: center; 
-
+      font-family: "Vollkorn", serif !important;
 
 }
-/* .headerImg{
-    height: 200vh;
-    width: 100%;
-    object-fit: cover;
-} */
-/* ...............navhar..................... */
+.heroText{
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  z-index: 100;
+  position: absolute;
+  top:300px;
+  left:250px;
+background-color: rgba(240, 231, 231, 0.5);
+  border-radius: 20px;
+  padding: 30px;
+
+  h1{
+    color: white;
+  }
+}
+#carouselExampleIndicators{
+  position: relative !important;
+}
+
+/* ......................navhar......................... */
 .lineNav{
-    height: 30px;
+    height: 25px;
     width: 2.5px;
-    background-color:var(--primary);   
+    margin-top: 9px;
+    background-color:rgb(183, 32, 32);   
 }
  .Logo{
     width: 150px !important; 
@@ -53,7 +58,15 @@ text-align: center;
       color:#8A1E41;
       font-weight: bold;
     }
-/* ............section Crafts................. */
+    nav a i{
+    color: var(--primary);
+    font-size: 30px;
+    margin-right: 0px;
+    }
+    .navbar-toggler {
+      margin-left: 300px !important;
+    }
+/* ..................section Crafts................................... */
 .title{
     margin-top: 50px;
     padding-top: 50px;
@@ -76,9 +89,6 @@ text-align: center;
      box-shadow: 1px 1px 12px var(--primary);
 }
 
-
-
-
 .craft:hover {
   transform: translateY(-8px); 
 }
@@ -93,16 +103,19 @@ text-align: center;
 .widths {
   flex: 0 0 auto;
   box-shadow: 1px 1px 14px var(--primary);
-  border-radius: 30px !important;
+  border-radius: 50px !important;
+  width: 350px;
+  padding: 20px;
 }
 
 .imgStore {
   height:320px;
+  width: 267px !important;
   object-fit: cover;
   padding-top: 20px;
-  border-radius: 20px !important;
+  border-radius: 60px !important;
   box-shadow: 1px 1px 5px var(--gray);
-  
+  margin: auto;
 }
 
 
@@ -141,6 +154,7 @@ text-align: center;
 }
 .Footer ul li{
     padding-bottom: 5px;
+     list-style-type: none;
 }
     .Footer .btn{
     border-radius: 30px;
@@ -150,6 +164,7 @@ text-align: center;
     -o-border-radius: 30px;
     margin-top: 10px;
     background-color: var(--primary);
+   
 }
 input[type="email"]{
     background-color:var(--gray);
@@ -241,67 +256,6 @@ border: none;
   margin-right: 2px;
 }  
 
-/* .raghadStor .container{
-    display: flex;
-    justify-items: center;
-    width: 50%;
-    height: 60vh;
-    gap:10px;
-    margin: auto;
-}
-.raghadStor .container img{
-    width: 15%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 15px;
-    border:2px solid white
-    transition: width 0.3s ease-in-out;
-}
-.raghadStor .container img:hover{
-    width: 50%;
-} */
-
-/* .raghadStor .gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
-}
-
-.raghadStor .gallery img {
-  flex: 1 1 calc(25% - 10px);
-  min-width: 150px;
-  max-width: 200px;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 15px;
-  border: 2px solid white;
-  transition: flex 0.3s ease, transform 0.3s ease;
-}
-
-.raghadStor .gallery img:hover {
-  flex: 1 1 calc(50% - 10px);
-  transform: scale(1.05);
-}
-
-/* تجاوب للشاشات الصغيرة */
-/* @media (max-width: 768px) {
-  .raghadStor .gallery img {
-    flex: 1 1 calc(33.33% - 10px);
-    max-width: none;
-    height: 150px;
-  }
-} */
-
-/* @media (max-width: 480px) {
-  .raghadStor .gallery img {
-    flex: 1 1 calc(50% - 10px);
-    height: 120px;
-  }
-*/
-
-
-
 /* .................clothing page.................. */
 
 .clothingHeader{
@@ -310,6 +264,7 @@ background-size: contain;
 object-fit: cover;
 background-repeat: no-repeat;
 margin-top: 65px;
+/* margin-bottom: 20px !important; */
 height: 60vh;
 width: 100%
    }
@@ -367,7 +322,10 @@ color: white;
     box-shadow: 1px 1px 10px 6px var(--primary);
 }
 .kids_Babies .product-card{
-    height: 440px;
+    height: 470px;
+}
+.kids_Babies .btn{
+  margin-top:13px;
 }
 
 .product-card img {
@@ -375,12 +333,10 @@ color: white;
   height: 180px;
   object-fit: contain;
   border-bottom: 1px solid #eee;
-  margin-bottom: 10px
+  margin-bottom: 5px;
  
 } 
-/* .product-card p{
-      font-size: 14px;
-} */
+
 /* .........................jewelrypage............... */
 .jewelryHeader{
     background-image: url(../images/jewelrypageimg1.webp);
@@ -404,11 +360,7 @@ color: white;
   }
  
   .jewelrySection .product-card{
-    height: 300px;
-  }
-  /* .............aboutpage.......... */
-  .ourstoryHeader{
-    background-image: url(../images/ourstory.jpg);
+    height: 350px;
   }
   /* ...........homeSection........... */
   .homeSection .product-card{
@@ -420,7 +372,7 @@ color: white;
 }
 /* ........kitchinSection......... */
 .decorSection .product-card p{
-    font-size: 12px;
+    font-size: 13px;
 }
 .product-card a{
   text-decoration: none;
@@ -432,8 +384,80 @@ color: white;
   color: var(--primary);
   font-weight:bold;
 }
-   
-   
+.product-card .btn{
+  /* margin-bottom: 200px !important; */
+  margin: 8px 0px !important;
+
+}
+/* ..........about................ */
+
+   .hero{
+    background-image: url(../images/ourstory.jpg);
+    height: 90vh;
+    background-size: cover;
+    background-position: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+   .hStory{
+    font-size: 100px;
+   }
+   }
+   /* .story{
+    width: 500px;
+   }
+   .pStory{
+    width: 500px;
+   } */
+    .ourStory{
+     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px;
+    gap:40px;
+    max-width: 100%;
+    flex-wrap: wrap;
+    }
+     .story{
+    width: 560px;
+    height: auto;
+ }
+ .ourStory .container .flex{
+    gap:137px;
+ }
+
+   /* ..........load.................. */
+   #loading {
+  position: fixed;
+  inset: 0;
+  background-color: white;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#loading p {
+  margin-top: 10px;
+  font-weight: bold;
+  color: var(--primary2);
+}
+#loading .spinner{
+   width: 100%; 
+   height: 100%;
+}
+#loading p{
+    color: var(--primary);
+}
+#loading #main-content{
+    display:none;
+    
+} 
+/* ..................cart................. */
+
 
 
 
