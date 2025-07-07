@@ -4,10 +4,6 @@
 .clothingHeader{
     height: 30vh;
 }
-header.clothingHeader{
-/* margin: 20px; */
-
-}
 
   .lineNav{
         display: none;
@@ -19,8 +15,8 @@ margin-bottom: 0px;
 }
 .heroText{
     position: absolute;
-    top:250px ;
-    left: 280px;
+    top:253px ;
+    left: 267px;
 }
 
 
@@ -36,11 +32,19 @@ margin-bottom: 0px;
 }
  .heroText{
     position: absolute;
-    top:150px ;
+    top:112px ;
     left: 100px;
     padding: 5px 10px;
     h1{
         font-size: 20px;
     }
 } 
+.clothingHeader{
+    height: 15vh;
+    margin-top: 110px;
+    h1{
+          padding: 50px 30px;
+    }
+    
+}
 }

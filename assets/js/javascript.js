@@ -1,3 +1,4 @@
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 window.addEventListener('load', function () {
   setTimeout(() => {
@@ -18,8 +19,6 @@ document.querySelectorAll(".product-card .btn").forEach((btn) => {
     const priceText = card.querySelector(".price").innerText.trim();
     const price = parseFloat(priceText.replace(/\$/g, '').split(" ")[0]);
 
-    let cart = JSON.parse(localStorage.getItem("cart")) || [];
-
     const existingIndex = cart.findIndex((item) => item.name === name);
     if (existingIndex > -1) {
       cart[existingIndex].quantity += 1;
@@ -33,8 +32,6 @@ document.querySelectorAll(".product-card .btn").forEach((btn) => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-  let cart = JSON.parse(localStorage.getItem("cart")) || [];
-
   const cartContainer = document.getElementById("cart-items");
   const totalItemsSpan = document.getElementById("total-items");
   const totalPriceSpan = document.getElementById("total-price");
@@ -86,11 +83,14 @@ document.addEventListener("DOMContentLoaded", () => {
     totalPriceSpan.textContent = totalPrice.toFixed(2);
     updateCartCount();
 
+    const oldCheckout = document.querySelector(".checkout-wrapper");
+    if (oldCheckout) oldCheckout.remove();
+
     const checkoutWrapper = document.createElement('div');
+    checkoutWrapper.className = "text-center checkout-wrapper";
     const button = document.createElement('button');
     button.className = "btn btn-danger fs-4 hover-effect mt-4";
     button.innerText = "Checkout";
-    checkoutWrapper.className = "text-center";
     checkoutWrapper.appendChild(button);
     cartContainer.appendChild(checkoutWrapper);
 
@@ -117,9 +117,28 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll(".remove-btn").forEach(button => {
       button.addEventListener("click", function () {
         const index = this.getAttribute("data-index");
-        cart.splice(index, 1);
-        localStorage.setItem("cart", JSON.stringify(cart));
-        updateCartUI();
+
+        Swal.fire({
+          title: "Are you sure?",
+          text: "You won't be able to revert this!",
+          icon: "warning",
+          showCancelButton: true,
+          confirmButtonColor: "#3085d6",
+          cancelButtonColor: "#d33",
+          confirmButtonText: "Yes, delete it!"
+        }).then((result) => {
+          if (result.isConfirmed) {
+            cart.splice(index, 1);
+            localStorage.setItem("cart", JSON.stringify(cart));
+            updateCartUI();
+
+            Swal.fire({
+              title: "Deleted!",
+              text: "Your file has been deleted.",
+              icon: "success"
+            });
+          }
+        });
       });
     });
   }
@@ -128,4 +147,80 @@ document.addEventListener("DOMContentLoaded", () => {
 
   document.body.style.backgroundColor = "#e1d7da";
 });
+ 
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("checkoutForm");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault(); 
+
+    let isValid = true;
+
+    function validateField(field, errorElementId, message) {
+      const errorElement = document.getElementById(errorElementId);
+      if (field.value.trim() === "" || field.value === "Title" || field.value === "Region/country") {
+        errorElement.textContent = message;
+        isValid = false;
+      } else {
+        errorElement.textContent = "";
+      }
+    }
+
+    validateField(document.getElementById("email"), "email-error", "email required");
+    validateField(document.getElementById("first-name"), "Firstname-error", "first name required");
+    validateField(document.getElementById("last-name"), "lastname-error", "last name required");
+    validateField(document.getElementById("address"), "lastname-error","address required");
+        validateField(document.getElementById("City"), "city-error", "city required");
+
+    
+    const selects = document.querySelectorAll("select#title");
+    if (selects.length > 0) {
+      const titleSelect = selects[0];
+      if (titleSelect.value === "Title") {
+        if (!titleSelect.nextElementSibling || !titleSelect.nextElementSibling.classList.contains("error-message")) {
+          const err = document.createElement("div");
+          err.className = "error-message";
+          err.textContent = "title required";
+          titleSelect.after(err);
+        } else {
+          titleSelect.nextElementSibling.textContent ="title required";
+        }
+        isValid = false;
+      } else {
+        if (titleSelect.nextElementSibling && titleSelect.nextElementSibling.classList.contains("error-message")) {
+          titleSelect.nextElementSibling.textContent = "";
+        }
+      }
+    }
+
+    if (selects.length > 1) {
+      const regionSelect = selects[1];
+      if (regionSelect.value === "Region/country") {
+        if (!regionSelect.nextElementSibling || !regionSelect.nextElementSibling.classList.contains("error-message")) {
+          const err = document.createElement("div");
+          err.className = "error-message";
+          err.textContent = "country required";
+          regionSelect.after(err);
+        } else {
+          regionSelect.nextElementSibling.textContent = "country required";
+        }
+        isValid = false;
+      } else {
+        if (regionSelect.nextElementSibling && regionSelect.nextElementSibling.classList.contains("error-message")) {
+          regionSelect.nextElementSibling.textContent = "";
+        }
+      }
+    }
+    if (isValid) {
+      form.submit();
+    }
+  });
+});
+
+
+
+
 
